@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Bugly (2.5.0)
+  - Cache (5.1.0)
+  - CocoaChainKit (0.6.0)
+  - CocoaDebug (0.1.1)
+  - SnapKit (4.0.0)
+  - Toast-Swift (3.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Bugly
+  - Cache
+  - CocoaChainKit
+  - CocoaDebug
+  - SnapKit
+  - Toast-Swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Bugly
+    - Cache
+    - CocoaChainKit
+    - CocoaDebug
+    - SnapKit
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  Cache: 7737c595aae7d94c7c0feca2c887288624e3b07e
+  CocoaChainKit: 69b773a62dcbfb7274da555ac02c67e186fa90cc
+  CocoaDebug: 91042e5e3077c1debd7b132bde82673395c8516f
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
+
+PODFILE CHECKSUM: 8a33efac3268f0b6f2a5050a443865b79179df47
+
+COCOAPODS: 1.6.0.beta.1

@@ -1,0 +1,15 @@
+platform :ios, '9.0'
+
+target 'ProjectSwiftDemo' do
+
+  use_frameworks!
+
+    pod 'SnapKit'
+    pod 'Alamofire'
+    pod 'Cache'
+    pod 'CocoaChainKit'
+    pod 'Toast-Swift'
+    pod 'CocoaDebug'
+    pod 'Bugly'
+
+end
