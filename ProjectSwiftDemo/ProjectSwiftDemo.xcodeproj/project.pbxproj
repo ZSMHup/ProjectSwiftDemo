@@ -43,6 +43,11 @@
 		E1FDF3382140DF15001FE08B /* ResponseValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF3302140DF15001FE08B /* ResponseValue.swift */; };
 		E1FDF33A2140DF3B001FE08B /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF3392140DF3B001FE08B /* NetworkTools.swift */; };
 		E1FDF33C2140DF59001FE08B /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF33B2140DF59001FE08B /* HomeAPI.swift */; };
+		E1FDF33E2140F6A0001FE08B /* HomeSubjectListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF33D2140F6A0001FE08B /* HomeSubjectListModel.swift */; };
+		E1FDF3402140FEE7001FE08B /* HomeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF33F2140FEE7001FE08B /* HomeListModel.swift */; };
+		E1FDF34221411472001FE08B /* HomeSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF34121411472001FE08B /* HomeSubjectCell.swift */; };
+		E1FDF34421411F98001FE08B /* HomeSubjectCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF34321411F98001FE08B /* HomeSubjectCollectionCell.swift */; };
+		E1FDF34621412D03001FE08B /* HomeWebCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF34521412D03001FE08B /* HomeWebCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +90,11 @@
 		E1FDF3302140DF15001FE08B /* ResponseValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseValue.swift; sourceTree = "<group>"; };
 		E1FDF3392140DF3B001FE08B /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		E1FDF33B2140DF59001FE08B /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		E1FDF33D2140F6A0001FE08B /* HomeSubjectListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubjectListModel.swift; sourceTree = "<group>"; };
+		E1FDF33F2140FEE7001FE08B /* HomeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListModel.swift; sourceTree = "<group>"; };
+		E1FDF34121411472001FE08B /* HomeSubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubjectCell.swift; sourceTree = "<group>"; };
+		E1FDF34321411F98001FE08B /* HomeSubjectCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubjectCollectionCell.swift; sourceTree = "<group>"; };
+		E1FDF34521412D03001FE08B /* HomeWebCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWebCell.swift; sourceTree = "<group>"; };
 		E75625F53F7FA9E7AEEFACF2 /* Pods-ProjectSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-ProjectSwiftDemo/Pods-ProjectSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -344,6 +354,8 @@
 		E1FDF3222140D01C001FE08B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E1FDF33D2140F6A0001FE08B /* HomeSubjectListModel.swift */,
+				E1FDF33F2140FEE7001FE08B /* HomeListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +363,9 @@
 		E1FDF3232140D01C001FE08B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1FDF34121411472001FE08B /* HomeSubjectCell.swift */,
+				E1FDF34321411F98001FE08B /* HomeSubjectCollectionCell.swift */,
+				E1FDF34521412D03001FE08B /* HomeWebCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -469,6 +484,8 @@
 				"${BUILT_PRODUCTS_DIR}/CocoaChainKit/CocoaChainKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaDebug/CocoaDebug.framework",
 				"${BUILT_PRODUCTS_DIR}/EachNavigationBar/EachNavigationBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
@@ -479,6 +496,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaChainKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaDebug.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EachNavigationBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
@@ -515,7 +534,9 @@
 				E1FDF2DD2140C9E5001FE08B /* BaseViewController.swift in Sources */,
 				E1FDF3382140DF15001FE08B /* ResponseValue.swift in Sources */,
 				E1FDF2F32140CA52001FE08B /* String+Extension.swift in Sources */,
+				E1FDF34421411F98001FE08B /* HomeSubjectCollectionCell.swift in Sources */,
 				E1FDF2F02140CA52001FE08B /* UIColor+Extension.swift in Sources */,
+				E1FDF33E2140F6A0001FE08B /* HomeSubjectListModel.swift in Sources */,
 				E1FDF3272140D03E001FE08B /* PersonalViewController.swift in Sources */,
 				E1FDF3142140CAAA001FE08B /* WebViewContainer.swift in Sources */,
 				E1FDF2F22140CA52001FE08B /* Int+Extension.swift in Sources */,
@@ -527,6 +548,8 @@
 				E1FDF3342140DF15001FE08B /* Network+Error.swift in Sources */,
 				E1FDF3122140CAAA001FE08B /* MarginLabel.swift in Sources */,
 				E1FDF3372140DF15001FE08B /* RequestManager.swift in Sources */,
+				E1FDF34221411472001FE08B /* HomeSubjectCell.swift in Sources */,
+				E1FDF34621412D03001FE08B /* HomeWebCell.swift in Sources */,
 				E1FDF3182140CD9E001FE08B /* AppDelegate+Root.swift in Sources */,
 				E1FDF3112140CAAA001FE08B /* CacheTools.swift in Sources */,
 				E1FDF3352140DF15001FE08B /* Network.swift in Sources */,
@@ -536,6 +559,7 @@
 				E1FDF2EF2140CA52001FE08B /* NotificationName+Extension.swift in Sources */,
 				E1FDF3312140DF15001FE08B /* CacheKey.swift in Sources */,
 				E1FDF33C2140DF59001FE08B /* HomeAPI.swift in Sources */,
+				E1FDF3402140FEE7001FE08B /* HomeListModel.swift in Sources */,
 				E1FDF3252140D031001FE08B /* HomeViewController.swift in Sources */,
 				E1FDF31B2140CF4B001FE08B /* MainTabBarController.swift in Sources */,
 				E1FDF3102140CAAA001FE08B /* Matcher.swift in Sources */,

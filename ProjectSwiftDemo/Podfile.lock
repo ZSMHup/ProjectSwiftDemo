@@ -5,6 +5,8 @@ PODS:
   - CocoaChainKit (0.6.0)
   - CocoaDebug (0.1.1)
   - EachNavigationBar (0.4.1)
+  - Kingfisher (4.9.0)
+  - MJRefresh (3.1.15.6)
   - SnapKit (4.0.0)
   - Toast-Swift (3.0.1)
 
@@ -15,6 +17,8 @@ DEPENDENCIES:
   - CocoaChainKit
   - CocoaDebug
   - EachNavigationBar
+  - Kingfisher
+  - MJRefresh
   - SnapKit
   - Toast-Swift
 
@@ -26,6 +30,8 @@ SPEC REPOS:
     - CocoaChainKit
     - CocoaDebug
     - EachNavigationBar
+    - Kingfisher
+    - MJRefresh
     - SnapKit
     - Toast-Swift
 
@@ -36,9 +42,11 @@ SPEC CHECKSUMS:
   CocoaChainKit: 69b773a62dcbfb7274da555ac02c67e186fa90cc
   CocoaDebug: 91042e5e3077c1debd7b132bde82673395c8516f
   EachNavigationBar: 1389b184772d3a200755937fde841f37404cede5
+  Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
+  MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 068c61459ded0b9ea386dccb51f016b96224292d
+PODFILE CHECKSUM: f31243f6387581ce0c6ef3b06e2ee6828d222f6f
 
 COCOAPODS: 1.6.0.beta.1

@@ -13,19 +13,19 @@ class Network {
     
     struct Response<T: Codable>: Codable {
         let code: Int
+        let status: Int
         let message: String
         let data: T
-        let token: String
         
         var success: Bool {
-            return code == 2000
+            return code == 0 && status == 1
         }
         
         enum CodingKeys: String, CodingKey {
             case code
+            case status
             case message
-            case data = "result"
-            case token
+            case data
         }
     }
 }

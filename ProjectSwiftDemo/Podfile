@@ -13,6 +13,8 @@ target 'ProjectSwiftDemo' do
     pod 'Toast-Swift'
     pod 'CocoaChainKit'
     pod 'EachNavigationBar'
+    pod 'MJRefresh'
+    pod 'Kingfisher'
     
     pod 'CocoaDebug'
     pod 'Bugly'

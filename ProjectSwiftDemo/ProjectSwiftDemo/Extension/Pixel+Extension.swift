@@ -7,14 +7,25 @@
 
 import UIKit
 
+var baseWidth: CGFloat = 375.0
+var baseheight: CGFloat = 812.0
+
 public extension CGFloat {
     
     var wpx: CGFloat {
-        return UIScreen.width / 375.0 * self
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            baseWidth = 768.0
+        }
+        
+        return UIScreen.width / baseWidth * self
     }
     
     var hpx: CGFloat {
-        return UIScreen.height / 812.0 * self
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            baseheight = 1024.0
+        }
+        return UIScreen.height / baseheight * self
     }
 }
 

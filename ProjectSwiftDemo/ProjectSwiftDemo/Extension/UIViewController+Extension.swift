@@ -17,9 +17,14 @@ public extension UIViewController {
             automaticallyAdjustsScrollViewInsets = false
         }
     }
-    
+    /*
     var topLayoutGuideBottom: ConstraintItem {
         return topLayoutGuide.snp.bottom
+    }
+    */
+    
+    var topLayoutGuideBottom: ConstraintItem {
+        return navigation.bar.snp.bottom
     }
     
     var safeAreaLayoutGuideBottom: ConstraintItem {

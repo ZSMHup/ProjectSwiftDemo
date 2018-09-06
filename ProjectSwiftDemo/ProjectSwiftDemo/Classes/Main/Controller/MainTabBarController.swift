@@ -27,9 +27,9 @@ class MainTabBarController: UITabBarController {
         viewControllers = [homeNav, personalNav]
     }
 
-    private func configureNavigationController(_ viewController: UIViewController) -> UINavigationController {
-        let nav = UINavigationController(rootViewController: viewController)
-        nav.navigationBar.barStyle = .default
+    private func configureNavigationController(_ viewController: UIViewController) -> BaseNavigationController {
+        let nav = BaseNavigationController(rootViewController: viewController)
+        nav.navigationBar.barStyle = .black
         nav.navigation.configuration.isEnabled = true
         nav.navigation.configuration.isTranslucent = false
         nav.navigation.configuration.barTintColor = UIColor.theme

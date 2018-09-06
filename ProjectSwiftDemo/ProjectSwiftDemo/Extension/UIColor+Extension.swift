@@ -16,7 +16,7 @@ public extension UIColor {
     
     /// #F5B817
     public static var theme: UIColor {
-        return UIColor(red: 33/255.0, green: 150/255.0, blue: 243/255.0, alpha: 1.0)
+        return UIColor(hex: "#2196F3")
     }
     
     /// #1D1D1D
@@ -26,7 +26,7 @@ public extension UIColor {
     
     /// #111111
     public static var dark: UIColor {
-        return UIColor(hex: "#111111")
+        return UIColor(hex: "#000000")
     }
     
     /// #777777

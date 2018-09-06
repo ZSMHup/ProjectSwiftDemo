@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 let kAppDebugAPiBaseUrl = "http://test.mis.ubye.cn/m/"
-let kAppReleaseAPiBaseUrl = "http://mis.v1.ubye.cn/m/"
+let kAppReleaseAPiBaseUrl = "http://api.ellabook.cn/rest/api/service"
 
 enum Environment {
     case debug
@@ -20,18 +20,16 @@ class NetworkTools {
     
     static let `default` = NetworkTools()
     
-    public var environment: Environment = .debug
+    public var environment: Environment = .release
     
-    private var baseURL: String = "http://test.mis.ubye.cn/m/"
+    private var baseURL: String = "http://api.ellabook.cn/rest/api/service"
     
-    public func requestUbyeHanlder<T: Codable>(
-        url: String,
-        paramterDic: Dictionary<String, Any>,
-        cache: Bool,
-        model: T.Type,
-        cacheCompletion: @escaping (T)->(),
-        successCompletion: @escaping (T)->(),
-        failureCompletion: @escaping (String)->()) {
+    public func requestPostHanlder<T: Codable>(paramterDic: Dictionary<String, Any>,
+                                               cache: Bool,
+                                               model: T.Type,
+                                               cacheCompletion: @escaping (T)->(),
+                                               successCompletion: @escaping (T)->(),
+                                               failureCompletion: @escaping (String)->()) {
         
         if environment == .debug {
             baseURL = kAppDebugAPiBaseUrl
@@ -39,22 +37,11 @@ class NetworkTools {
             baseURL = kAppReleaseAPiBaseUrl
         }
         
-        let urlString = baseURL + url
-        let params: [String : Any] = [
-            "sign": "",
-            "body": paramterDic
-        ]
-        let headers: HTTPHeaders = [
-            "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhYWM4MDliNC04YzQ3LTRiMTgtYjhiMi1mZmZmNTlmMzFiY2IiLCJpYXQiOjE1MzYxMzI1MDEsImlzcyI6IkFkaW5uZXQiLCJzdWIiOiIzOTYifQ.p0hCrz_drTk9Ny4x6bg3ePr3j_lv2D2lKDBVYMI6bJI"
-        ]
-        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         timeoutIntervalForRequest(20)
-        request(urlString,
+        request(baseURL,
                 method: .post,
-                params: params,
-                encoding: Alamofire.JSONEncoding.default,
-                headers: headers)
+                params: paramterDic)
             .cache(cache)
             .responseCacheAndData { (dataValue) in
                 
@@ -65,7 +52,7 @@ class NetworkTools {
                 switch dataValue.result {
                 case .success(let data):
                     if let responseData = try? JSONDecoder().decode(Network.Response<T>.self, from: data) {
-                        debugPrint(responseData.message, responseData.code)
+                        
                         if !responseData.success {
                             failureCompletion(responseData.message)
                             return
