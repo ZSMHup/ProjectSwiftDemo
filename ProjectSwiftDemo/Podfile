@@ -1,5 +1,8 @@
 platform :ios, '9.0'
 
+#屏蔽三方框架警告
+inhibit_all_warnings!
+
 target 'ProjectSwiftDemo' do
 
   use_frameworks!
@@ -7,8 +10,10 @@ target 'ProjectSwiftDemo' do
     pod 'SnapKit'
     pod 'Alamofire'
     pod 'Cache'
-    pod 'CocoaChainKit'
     pod 'Toast-Swift'
+    pod 'CocoaChainKit'
+    pod 'EachNavigationBar'
+    
     pod 'CocoaDebug'
     pod 'Bugly'
 

@@ -4,6 +4,7 @@ PODS:
   - Cache (5.1.0)
   - CocoaChainKit (0.6.0)
   - CocoaDebug (0.1.1)
+  - EachNavigationBar (0.4.1)
   - SnapKit (4.0.0)
   - Toast-Swift (3.0.1)
 
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - Cache
   - CocoaChainKit
   - CocoaDebug
+  - EachNavigationBar
   - SnapKit
   - Toast-Swift
 
@@ -23,6 +25,7 @@ SPEC REPOS:
     - Cache
     - CocoaChainKit
     - CocoaDebug
+    - EachNavigationBar
     - SnapKit
     - Toast-Swift
 
@@ -32,9 +35,10 @@ SPEC CHECKSUMS:
   Cache: 7737c595aae7d94c7c0feca2c887288624e3b07e
   CocoaChainKit: 69b773a62dcbfb7274da555ac02c67e186fa90cc
   CocoaDebug: 91042e5e3077c1debd7b132bde82673395c8516f
+  EachNavigationBar: 1389b184772d3a200755937fde841f37404cede5
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 8a33efac3268f0b6f2a5050a443865b79179df47
+PODFILE CHECKSUM: 068c61459ded0b9ea386dccb51f016b96224292d
 
 COCOAPODS: 1.6.0.beta.1

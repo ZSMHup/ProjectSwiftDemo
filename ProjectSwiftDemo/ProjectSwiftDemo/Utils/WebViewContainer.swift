@@ -38,7 +38,7 @@ class WebViewContainer: UIView {
     
     private lazy var progressView: UIProgressView = {
         let progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 2))
-//        progressView.progressTintColor = UIColor.theme
+        progressView.progressTintColor = UIColor.theme
         progressView.trackTintColor = UIColor.clear
         progressView.isUserInteractionEnabled = false
         return progressView

@@ -114,16 +114,4 @@ class NetworkTools {
     }
 }
 
-private func configParameters(paramterDic: Dictionary<String, Any>) -> Dictionary<String, Any> {
-    
-    var paramsDic = [String : Any]()
-    paramsDic["accessToken"] = "2f0674151bfb72f1358a4e63b715df7" as Any
-    paramsDic["version"] = "4.0.5" as Any
-    paramsDic["deviceType"] = "1" as Any
-    for e in paramterDic {
-        paramsDic[e.key] = paramterDic[e.key] as Any
-    }
-    return paramsDic
-}
-
 
