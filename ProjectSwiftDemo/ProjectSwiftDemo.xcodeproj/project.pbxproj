@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CE8A9D1165826FCD5804BCBF /* Pods_ProjectSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E79C34711A154D2EBEE946E /* Pods_ProjectSwiftDemo.framework */; };
+		E19C89E421420B3700538EC0 /* HomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89E321420B3700538EC0 /* HomeSectionView.swift */; };
+		E19C89E62142201600538EC0 /* HomeHorizontalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89E52142201600538EC0 /* HomeHorizontalCollectionCell.swift */; };
+		E19C89E82142243C00538EC0 /* HomeHorizontalHasButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89E72142243C00538EC0 /* HomeHorizontalHasButtonCell.swift */; };
+		E19C89EA214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89E9214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift */; };
+		E19C89EC2142457F00538EC0 /* HomeHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89EB2142457F00538EC0 /* HomeHorizontalCell.swift */; };
+		E19C89EE21424B3000538EC0 /* HomeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */; };
+		E1FB59E6214255CA00B8252A /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59E5214255CA00B8252A /* BookDetailViewController.swift */; };
 		E1FDF2C82140C843001FE08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF2C32140C843001FE08B /* Assets.xcassets */; };
 		E1FDF2C92140C843001FE08B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF2C42140C843001FE08B /* LaunchScreen.storyboard */; };
 		E1FDF2CF2140C911001FE08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF2CE2140C911001FE08B /* AppDelegate.swift */; };
@@ -53,6 +60,13 @@
 /* Begin PBXFileReference section */
 		36637DEEF15FD1A4D3936D0D /* Pods-ProjectSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-ProjectSwiftDemo/Pods-ProjectSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8E79C34711A154D2EBEE946E /* Pods_ProjectSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E19C89E321420B3700538EC0 /* HomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionView.swift; sourceTree = "<group>"; };
+		E19C89E52142201600538EC0 /* HomeHorizontalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHorizontalCollectionCell.swift; sourceTree = "<group>"; };
+		E19C89E72142243C00538EC0 /* HomeHorizontalHasButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHorizontalHasButtonCell.swift; sourceTree = "<group>"; };
+		E19C89E9214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHorizontalHasButtonCollectionCell.swift; sourceTree = "<group>"; };
+		E19C89EB2142457F00538EC0 /* HomeHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHorizontalCell.swift; sourceTree = "<group>"; };
+		E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWebViewController.swift; sourceTree = "<group>"; };
+		E1FB59E5214255CA00B8252A /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		E1FDF2AD2140C7ED001FE08B /* ProjectSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FDF2BC2140C7EF001FE08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1FDF2C32140C843001FE08B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -347,6 +361,8 @@
 			isa = PBXGroup;
 			children = (
 				E1FDF3242140D031001FE08B /* HomeViewController.swift */,
+				E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */,
+				E1FB59E5214255CA00B8252A /* BookDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -366,6 +382,11 @@
 				E1FDF34121411472001FE08B /* HomeSubjectCell.swift */,
 				E1FDF34321411F98001FE08B /* HomeSubjectCollectionCell.swift */,
 				E1FDF34521412D03001FE08B /* HomeWebCell.swift */,
+				E19C89E52142201600538EC0 /* HomeHorizontalCollectionCell.swift */,
+				E19C89E72142243C00538EC0 /* HomeHorizontalHasButtonCell.swift */,
+				E19C89E9214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift */,
+				E19C89EB2142457F00538EC0 /* HomeHorizontalCell.swift */,
+				E19C89E321420B3700538EC0 /* HomeSectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,6 +549,7 @@
 			files = (
 				E1FDF2CF2140C911001FE08B /* AppDelegate.swift in Sources */,
 				E1FDF2F42140CA52001FE08B /* Date+Extension.swift in Sources */,
+				E19C89E421420B3700538EC0 /* HomeSectionView.swift in Sources */,
 				E1FDF2F12140CA52001FE08B /* UIBarButtonItem+Extension.swift in Sources */,
 				E1FDF2F52140CA52001FE08B /* Pixel+Extension.swift in Sources */,
 				E1FDF3362140DF15001FE08B /* NetworkRequest.swift in Sources */,
@@ -536,7 +558,10 @@
 				E1FDF2F32140CA52001FE08B /* String+Extension.swift in Sources */,
 				E1FDF34421411F98001FE08B /* HomeSubjectCollectionCell.swift in Sources */,
 				E1FDF2F02140CA52001FE08B /* UIColor+Extension.swift in Sources */,
+				E19C89E82142243C00538EC0 /* HomeHorizontalHasButtonCell.swift in Sources */,
 				E1FDF33E2140F6A0001FE08B /* HomeSubjectListModel.swift in Sources */,
+				E19C89E62142201600538EC0 /* HomeHorizontalCollectionCell.swift in Sources */,
+				E1FB59E6214255CA00B8252A /* BookDetailViewController.swift in Sources */,
 				E1FDF3272140D03E001FE08B /* PersonalViewController.swift in Sources */,
 				E1FDF3142140CAAA001FE08B /* WebViewContainer.swift in Sources */,
 				E1FDF2F22140CA52001FE08B /* Int+Extension.swift in Sources */,
@@ -550,6 +575,8 @@
 				E1FDF3372140DF15001FE08B /* RequestManager.swift in Sources */,
 				E1FDF34221411472001FE08B /* HomeSubjectCell.swift in Sources */,
 				E1FDF34621412D03001FE08B /* HomeWebCell.swift in Sources */,
+				E19C89EA214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift in Sources */,
+				E19C89EE21424B3000538EC0 /* HomeWebViewController.swift in Sources */,
 				E1FDF3182140CD9E001FE08B /* AppDelegate+Root.swift in Sources */,
 				E1FDF3112140CAAA001FE08B /* CacheTools.swift in Sources */,
 				E1FDF3352140DF15001FE08B /* Network.swift in Sources */,
@@ -560,6 +587,7 @@
 				E1FDF3312140DF15001FE08B /* CacheKey.swift in Sources */,
 				E1FDF33C2140DF59001FE08B /* HomeAPI.swift in Sources */,
 				E1FDF3402140FEE7001FE08B /* HomeListModel.swift in Sources */,
+				E19C89EC2142457F00538EC0 /* HomeHorizontalCell.swift in Sources */,
 				E1FDF3252140D031001FE08B /* HomeViewController.swift in Sources */,
 				E1FDF31B2140CF4B001FE08B /* MainTabBarController.swift in Sources */,
 				E1FDF3102140CAAA001FE08B /* Matcher.swift in Sources */,

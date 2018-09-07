@@ -21,6 +21,11 @@ class HomeViewController: BaseViewController {
             .dataSource(self)
             .register(HomeSubjectCell.self, forCellWithReuseIdentifier: "HomeSubjectCell")
             .register(HomeWebCell.self, forCellWithReuseIdentifier: "HomeWebCell")
+            .register(HomeHorizontalCollectionCell.self, forCellWithReuseIdentifier: "HomeHorizontalCollectionCell")
+            .register(HomeHorizontalHasButtonCell.self, forCellWithReuseIdentifier: "HomeHorizontalHasButtonCell")
+            .register(HomeHorizontalCell.self, forCellWithReuseIdentifier: "HomeHorizontalCell")
+            .register(HomeSectionView.self, forSectionHeaderWithReuseIdentifier: "HomeSectionView")
+            .register(UICollectionReusableView.self, forSectionHeaderWithReuseIdentifier: "UICollectionReusableView")
             .build
     }()
     
@@ -72,7 +77,6 @@ extension HomeViewController {
             if self.collectionView.mj_header.isRefreshing {
                 self.collectionView.mj_header.endRefreshing()
             }
-            debugPrint(self.subjectArray.count, self.homeListArray.count)
             self.collectionView.reloadData()
         }
     }
@@ -99,7 +103,6 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     // UICollectionViewDataSource
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return homeListArray.count + (subjectArray.isEmpty ? 0 : 1)
     }
@@ -131,9 +134,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let model: HomeListModel = homeListArray[indexPath.section - (subjectArray.isEmpty ? 0 : 1)]
         
         switch model.partStyle {
-        case "SLIDE_PORTRAIT": /// 竖向
-            
-            break
+        case "SLIDE_PORTRAIT": /// 竖向 HomeHorizontalCollectionCell
+            let cell: HomeHorizontalCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeHorizontalCollectionCell", for: indexPath) as! HomeHorizontalCollectionCell
+            cell.updateSlidePro(model: model.bookList[indexPath.item])
+            return cell
         case "DAILY_BOOK": /// 单个或者横向
             let cell: HomeWebCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeWebCell", for: indexPath) as! HomeWebCell
             if let dailyListModel = model.dailyList.first {
@@ -142,18 +146,58 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
             return cell
         case "IMAGE_TEXT": /// 单个或者横向
-            
-            break
+            let cell: HomeHorizontalHasButtonCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeHorizontalHasButtonCell", for: indexPath) as! HomeHorizontalHasButtonCell
+            cell.dataSource = model.bookList
+            cell.didSelectedItem = { index in
+                let bookDetailVC = BookDetailViewController()
+                self.navigationController?.pushViewController(bookDetailVC, animated: true)
+            }
+            return cell
         default: /// 单个或者横向
+            let cell: HomeHorizontalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeHorizontalCell", for: indexPath) as! HomeHorizontalCell
+            cell.dataSource = model.bookList
+            cell.didSelectedItem = { index in
+                let bookDetailVC = BookDetailViewController()
+                self.navigationController?.pushViewController(bookDetailVC, animated: true)
+            }
+            return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        var reusableview: UICollectionReusableView!
+        if kind == UICollectionElementKindSectionHeader {
+            if !subjectArray.isEmpty, indexPath.section == 0 {
+                let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "UICollectionReusableView", for: indexPath)
+                return view
+            }
             
-            break
+            let model: HomeListModel = homeListArray[indexPath.section - (subjectArray.isEmpty ? 0 : 1)]
+            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeSectionView", for: indexPath) as! HomeSectionView
+            view.update(model: model)
+            reusableview = view
         }
-        
-        let cell: HomeSubjectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeSubjectCell", for: indexPath) as! HomeSubjectCell
-        cell.didSelectedItem = { index in
-            debugPrint(index)
+        return reusableview
+    }
+    
+    // 处理滚动条被 UICollectionReusableView 遮挡
+    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+        view.layer.zPosition = 0.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model: HomeListModel = homeListArray[indexPath.section - (subjectArray.isEmpty ? 0 : 1)]
+        if model.targetType == "H5" {
+            debugPrint(indexPath.section, indexPath.row)
+            if let url = model.dailyList.first?.targetPage {
+               let webViewVC = HomeWebViewController(url: url)
+                webViewVC.navigation.item.title = "每日读绘本"
+                navigationController?.pushViewController(webViewVC, animated: true)
+            }
+        } else {
+            let bookDetailVC = BookDetailViewController()
+            navigationController?.pushViewController(bookDetailVC, animated: true)
         }
-        return cell
     }
 }
 
@@ -175,5 +219,26 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         default: /// 单个或者横向
             return CGSize(width: UIScreen.width, height: 165.hpx)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if !subjectArray.isEmpty, section == 0 {
+            return CGSize(width: UIScreen.width, height: CGFloat.min)
+        }
+        return CGSize(width: UIScreen.width, height: 64.hpx)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        if !subjectArray.isEmpty, section == 0 {
+            return UIEdgeInsetsMake(0, 0, 0, 0)
+        }
+        
+        let model: HomeListModel = homeListArray[section - (subjectArray.isEmpty ? 0 : 1)]
+        
+        if model.partStyle == "SLIDE_PORTRAIT" { // 竖向
+            return UIEdgeInsetsMake(10, 36.wpx, 12, 36.wpx);
+        }
+        return UIEdgeInsetsMake(0, 0, 0, 0)
     }
 }

@@ -27,6 +27,7 @@ extension AppDelegate {
         #if DEBUG
         CocoaDebug.enable()
         CocoaDebug.recordCrash = true
+        CocoaDebug.mainColor = "#2196F3"
         #endif
     }
     

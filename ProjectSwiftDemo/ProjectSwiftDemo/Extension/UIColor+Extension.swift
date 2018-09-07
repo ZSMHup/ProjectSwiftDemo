@@ -9,12 +9,12 @@ import UIKit
 
 public extension UIColor {
     
-    /// #E8B838
+    /// #F6F6F6
     public static var global: UIColor {
-        return UIColor(hex: "#E8B838")
+        return UIColor(hex: "#F6F6F6")
     }
     
-    /// #F5B817
+    /// #2196F3
     public static var theme: UIColor {
         return UIColor(hex: "#2196F3")
     }
@@ -24,7 +24,7 @@ public extension UIColor {
         return UIColor(hex: "#1D1D1D")
     }
     
-    /// #111111
+    /// #000000
     public static var dark: UIColor {
         return UIColor(hex: "#000000")
     }
@@ -46,6 +46,10 @@ public extension UIColor {
     
     public static func whiteWithAlpha(_ alpha: CGFloat) -> UIColor {
         return UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: alpha)
+    }
+    
+    public static func darkWithAlpha(_ alpha: CGFloat) -> UIColor {
+        return UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: alpha)
     }
 }
 

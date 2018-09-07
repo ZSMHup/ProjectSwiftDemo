@@ -32,13 +32,12 @@ class WebViewContainer: UIView {
         let webView = WKWebView(frame: bounds, configuration: configuration)
 //        webView.scrollView.backgroundColor = UIColor.globalBackground
         webView.navigationDelegate = self
-        webView.scrollView.showsVerticalScrollIndicator = false
         return webView
     }()
     
     private lazy var progressView: UIProgressView = {
         let progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 2))
-        progressView.progressTintColor = UIColor.theme
+        progressView.progressTintColor = UIColor.green
         progressView.trackTintColor = UIColor.clear
         progressView.isUserInteractionEnabled = false
         return progressView
