@@ -15,6 +15,7 @@ target 'ProjectSwiftDemo' do
     pod 'EachNavigationBar'
     pod 'MJRefresh'
     pod 'Kingfisher'
+    pod 'Tabman'
     
     pod 'CocoaDebug'
     pod 'Bugly'

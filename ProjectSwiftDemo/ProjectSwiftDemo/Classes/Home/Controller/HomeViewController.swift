@@ -96,7 +96,7 @@ extension HomeViewController {
             self?.requestHomeData()
         })
         
-        collectionView.mj_header.beginRefreshing()
+//        collectionView.mj_header.beginRefreshing()
     }
 }
 
@@ -126,7 +126,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if !subjectArray.isEmpty, indexPath.section == 0 {
             let cell: HomeSubjectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeSubjectCell", for: indexPath) as! HomeSubjectCell
             cell.didSelectedItem = { index in
-                debugPrint(index)
+                
+                if index == 0 {
+                    self.navigationController?.pushViewController(HomeSubjectViewController(defaultPage: .first), animated: true)
+                } else {
+                    self.navigationController?.pushViewController(SubjectOtherViewController(), animated: true)
+                }
+                
             }
             return cell
         }
@@ -188,7 +194,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model: HomeListModel = homeListArray[indexPath.section - (subjectArray.isEmpty ? 0 : 1)]
         if model.targetType == "H5" {
-            debugPrint(indexPath.section, indexPath.row)
             if let url = model.dailyList.first?.targetPage {
                let webViewVC = HomeWebViewController(url: url)
                 webViewVC.navigation.item.title = "每日读绘本"

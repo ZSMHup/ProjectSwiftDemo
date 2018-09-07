@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-let kAppDebugAPiBaseUrl = "http://test.mis.ubye.cn/m/"
+let kAppDebugAPiBaseUrl = "http://dev.ellabook.cn/open/api"
 let kAppReleaseAPiBaseUrl = "http://api.ellabook.cn/rest/api/service"
 
 enum Environment {
@@ -22,7 +22,7 @@ class NetworkTools {
     
     public var environment: Environment = .release
     
-    private var baseURL: String = "http://api.ellabook.cn/rest/api/service"
+    private var baseURL: String = "http://dev.ellabook.cn/open/api"
     
     public func requestPostHanlder<T: Codable>(paramterDic: Dictionary<String, Any>,
                                                cache: Bool,

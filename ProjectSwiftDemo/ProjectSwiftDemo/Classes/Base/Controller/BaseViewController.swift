@@ -19,6 +19,7 @@ class BaseViewController: UIViewController {
 
     deinit {
         debugPrint("deinit: \(classForCoder)")
+        Toast.hide()
     }
 
 }

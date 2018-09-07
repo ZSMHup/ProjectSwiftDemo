@@ -6,6 +6,7 @@
 //  Copyright © 2018年 zsm. All rights reserved.
 //
 
+import Foundation
 
 /// 首页顶部功能
 ///
@@ -55,4 +56,46 @@ func requestHomeAllList(
     }) { (error) in
         failureCompletion(error)
     }
+}
+
+func requestSubjectList(
+    page: Int,
+    sourceCode: String,
+    cacheCompletion: @escaping ([SubjectListModel])->(),
+    successCompletion: @escaping ([SubjectListModel])->(),
+    failureCompletion: @escaping (String)->()) {
+    
+    let paramter = [
+        "method": "ella.openPlatform.opListBookCommons",
+        "content": convertDictionaryToString(dict: ["pageIndex": "\(page)",
+                                                    "pageSize": "10",
+                                                    "sourceCode": sourceCode,
+                                                    "resource": "normal"])
+        ] as [String : Any]
+    
+    
+    NetworkTools.default.requestPostHanlder(paramterDic: paramter,
+                                            cache: true,
+                                            model: [SubjectListModel].self,
+                                            cacheCompletion: { (caches) in
+        cacheCompletion(caches)
+    }, successCompletion: { (models) in
+        successCompletion(models)
+    }) { (error) in
+        failureCompletion(error)
+    }
+}
+
+func convertDictionaryToString(dict: [String: Any]) -> String {
+    var result:String = ""
+    do {
+        //如果设置options为JSONSerialization.WritingOptions.prettyPrinted,则打印格式更好阅读
+        let jsonData = try JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions.init(rawValue: 0))
+        if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+            result = JSONString
+        }
+    } catch {
+        result = ""
+    }
+    return result
 }

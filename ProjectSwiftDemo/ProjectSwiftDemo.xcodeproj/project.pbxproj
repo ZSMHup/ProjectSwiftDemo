@@ -15,6 +15,11 @@
 		E19C89EC2142457F00538EC0 /* HomeHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89EB2142457F00538EC0 /* HomeHorizontalCell.swift */; };
 		E19C89EE21424B3000538EC0 /* HomeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */; };
 		E1FB59E6214255CA00B8252A /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59E5214255CA00B8252A /* BookDetailViewController.swift */; };
+		E1FB59EF214263AF00B8252A /* HomeSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59EE214263AF00B8252A /* HomeSubjectViewController.swift */; };
+		E1FB59F12142693900B8252A /* CommonTabmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59F02142693900B8252A /* CommonTabmanViewController.swift */; };
+		E1FB59F321426A8C00B8252A /* HomeSubjectChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59F221426A8C00B8252A /* HomeSubjectChildViewController.swift */; };
+		E1FB59F521427B1C00B8252A /* SubjectListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59F421427B1C00B8252A /* SubjectListModel.swift */; };
+		E1FB59FC21427E1400B8252A /* SubjectOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59FB21427E1400B8252A /* SubjectOtherViewController.swift */; };
 		E1FDF2C82140C843001FE08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF2C32140C843001FE08B /* Assets.xcassets */; };
 		E1FDF2C92140C843001FE08B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF2C42140C843001FE08B /* LaunchScreen.storyboard */; };
 		E1FDF2CF2140C911001FE08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FDF2CE2140C911001FE08B /* AppDelegate.swift */; };
@@ -67,6 +72,11 @@
 		E19C89EB2142457F00538EC0 /* HomeHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHorizontalCell.swift; sourceTree = "<group>"; };
 		E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWebViewController.swift; sourceTree = "<group>"; };
 		E1FB59E5214255CA00B8252A /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		E1FB59EE214263AF00B8252A /* HomeSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubjectViewController.swift; sourceTree = "<group>"; };
+		E1FB59F02142693900B8252A /* CommonTabmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTabmanViewController.swift; sourceTree = "<group>"; };
+		E1FB59F221426A8C00B8252A /* HomeSubjectChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubjectChildViewController.swift; sourceTree = "<group>"; };
+		E1FB59F421427B1C00B8252A /* SubjectListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectListModel.swift; sourceTree = "<group>"; };
+		E1FB59FB21427E1400B8252A /* SubjectOtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectOtherViewController.swift; sourceTree = "<group>"; };
 		E1FDF2AD2140C7ED001FE08B /* ProjectSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FDF2BC2140C7EF001FE08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1FDF2C32140C843001FE08B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +149,79 @@
 				E75625F53F7FA9E7AEEFACF2 /* Pods-ProjectSwiftDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E1FB59E82142620200B8252A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB59E92142620200B8252A /* Controller */,
+				E1FB59EA2142620200B8252A /* Model */,
+				E1FB59EB2142620200B8252A /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E1FB59E92142620200B8252A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB59F02142693900B8252A /* CommonTabmanViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1FB59EA2142620200B8252A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1FB59EB2142620200B8252A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1FB59F621427DD000B8252A /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB59F721427DD000B8252A /* Subject */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		E1FB59F721427DD000B8252A /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB59F821427DD000B8252A /* Controller */,
+				E1FB59F921427DD000B8252A /* Model */,
+				E1FB59FA21427DD000B8252A /* View */,
+			);
+			path = Subject;
+			sourceTree = "<group>";
+		};
+		E1FB59F821427DD000B8252A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB59FB21427E1400B8252A /* SubjectOtherViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1FB59F921427DD000B8252A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB59F421427B1C00B8252A /* SubjectListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1FB59FA21427DD000B8252A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E1FDF2A42140C7ED001FE08B = {
@@ -222,6 +305,7 @@
 		E1FDF2D22140C91F001FE08B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E1FB59E82142620200B8252A /* Common */,
 				E1FDF2D42140C9B8001FE08B /* Base */,
 				E1FDF2D82140C9B8001FE08B /* Main */,
 				E1FDF3202140D01C001FE08B /* Home */,
@@ -353,6 +437,7 @@
 				E1FDF3212140D01C001FE08B /* Controller */,
 				E1FDF3222140D01C001FE08B /* Model */,
 				E1FDF3232140D01C001FE08B /* View */,
+				E1FB59F621427DD000B8252A /* Page */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -363,6 +448,8 @@
 				E1FDF3242140D031001FE08B /* HomeViewController.swift */,
 				E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */,
 				E1FB59E5214255CA00B8252A /* BookDetailViewController.swift */,
+				E1FB59EE214263AF00B8252A /* HomeSubjectViewController.swift */,
+				E1FB59F221426A8C00B8252A /* HomeSubjectChildViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -501,25 +588,31 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ProjectSwiftDemo/Pods-ProjectSwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework",
 				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaChainKit/CocoaChainKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaDebug/CocoaDebug.framework",
 				"${BUILT_PRODUCTS_DIR}/EachNavigationBar/EachNavigationBar.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoInsetter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaChainKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaDebug.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EachNavigationBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tabman.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +651,7 @@
 				E1FDF2F32140CA52001FE08B /* String+Extension.swift in Sources */,
 				E1FDF34421411F98001FE08B /* HomeSubjectCollectionCell.swift in Sources */,
 				E1FDF2F02140CA52001FE08B /* UIColor+Extension.swift in Sources */,
+				E1FB59F321426A8C00B8252A /* HomeSubjectChildViewController.swift in Sources */,
 				E19C89E82142243C00538EC0 /* HomeHorizontalHasButtonCell.swift in Sources */,
 				E1FDF33E2140F6A0001FE08B /* HomeSubjectListModel.swift in Sources */,
 				E19C89E62142201600538EC0 /* HomeHorizontalCollectionCell.swift in Sources */,
@@ -568,6 +662,7 @@
 				E1FDF3322140DF15001FE08B /* CacheManager.swift in Sources */,
 				E1FDF3132140CAAA001FE08B /* Toast.swift in Sources */,
 				E1FDF2EC2140CA52001FE08B /* UIImage+Extension.swift in Sources */,
+				E1FB59F521427B1C00B8252A /* SubjectListModel.swift in Sources */,
 				E1FDF2EE2140CA52001FE08B /* UIViewController+Extension.swift in Sources */,
 				E1FDF2EB2140CA52001FE08B /* UIApplication+Extension.swift in Sources */,
 				E1FDF3342140DF15001FE08B /* Network+Error.swift in Sources */,
@@ -581,6 +676,9 @@
 				E1FDF3112140CAAA001FE08B /* CacheTools.swift in Sources */,
 				E1FDF3352140DF15001FE08B /* Network.swift in Sources */,
 				E1FDF33A2140DF3B001FE08B /* NetworkTools.swift in Sources */,
+				E1FB59FC21427E1400B8252A /* SubjectOtherViewController.swift in Sources */,
+				E1FB59EF214263AF00B8252A /* HomeSubjectViewController.swift in Sources */,
+				E1FB59F12142693900B8252A /* CommonTabmanViewController.swift in Sources */,
 				E1FDF3332140DF15001FE08B /* CleanJSON.swift in Sources */,
 				E1FDF3162140CD6F001FE08B /* AppDelegate+Services.swift in Sources */,
 				E1FDF2EF2140CA52001FE08B /* NotificationName+Extension.swift in Sources */,
