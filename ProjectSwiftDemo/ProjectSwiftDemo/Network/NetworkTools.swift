@@ -8,8 +8,8 @@
 import Foundation
 import Alamofire
 
-let kAppDebugAPiBaseUrl = "http://dev.ellabook.cn/open/api"
-let kAppReleaseAPiBaseUrl = "http://api.ellabook.cn/rest/api/service"
+let kAppDebugAPIBaseUrl = "http://dev.ellabook.cn/open/api"
+let kAppReleaseAPIBaseUrl = "http://api.ellabook.cn/rest/api/service"
 
 enum Environment {
     case debug
@@ -20,7 +20,7 @@ class NetworkTools {
     
     static let `default` = NetworkTools()
     
-    public var environment: Environment = .release
+    public var environment: Environment = .debug
     
     private var baseURL: String = "http://dev.ellabook.cn/open/api"
     
@@ -32,9 +32,9 @@ class NetworkTools {
                                                failureCompletion: @escaping (String)->()) {
         
         if environment == .debug {
-            baseURL = kAppDebugAPiBaseUrl
+            baseURL = kAppDebugAPIBaseUrl
         } else {
-            baseURL = kAppReleaseAPiBaseUrl
+            baseURL = kAppReleaseAPIBaseUrl
         }
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -54,7 +54,9 @@ class NetworkTools {
                     if let responseData = try? JSONDecoder().decode(Network.Response<T>.self, from: data) {
                         
                         if !responseData.success {
-                            failureCompletion(responseData.message)
+                            if !dataValue.isCacheData {
+                                failureCompletion(responseData.message)
+                            }
                             return
                         }
                         

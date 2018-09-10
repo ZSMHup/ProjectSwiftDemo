@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.7.3)
-  - AutoInsetter (1.2.6)
   - Bugly (2.5.0)
   - Cache (5.1.0)
   - CocoaChainKit (0.6.0)
@@ -8,12 +7,9 @@ PODS:
   - EachNavigationBar (0.4.1)
   - Kingfisher (4.9.0)
   - MJRefresh (3.1.15.6)
-  - Pageboy (2.5.4)
   - SnapKit (4.0.0)
-  - Tabman (1.9.2):
-    - AutoInsetter (~> 1.2.0)
-    - Pageboy (~> 2.5.0)
   - Toast-Swift (3.0.1)
+  - XLPagerTabStrip (8.0.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -25,13 +21,12 @@ DEPENDENCIES:
   - Kingfisher
   - MJRefresh
   - SnapKit
-  - Tabman
   - Toast-Swift
+  - XLPagerTabStrip
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - AutoInsetter
     - Bugly
     - Cache
     - CocoaChainKit
@@ -39,14 +34,12 @@ SPEC REPOS:
     - EachNavigationBar
     - Kingfisher
     - MJRefresh
-    - Pageboy
     - SnapKit
-    - Tabman
     - Toast-Swift
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  AutoInsetter: 3713c857f3c0cc4b6265fe55ecf0c14bfe8622ee
   Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   Cache: 7737c595aae7d94c7c0feca2c887288624e3b07e
   CocoaChainKit: 69b773a62dcbfb7274da555ac02c67e186fa90cc
@@ -54,11 +47,10 @@ SPEC CHECKSUMS:
   EachNavigationBar: 1389b184772d3a200755937fde841f37404cede5
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
   MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
-  Pageboy: 46d743783414a18f8b27a988485e0ed2ea219ff7
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  Tabman: a09f7d7aa62b231ec475ca9eb9171f7cc973a3d7
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
+  XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: 04aa6611393a645bba2a4519e0d8e1e8b4d56945
+PODFILE CHECKSUM: 4f3d88a316bd88f7453082d8f8f9d2c724a73093
 
 COCOAPODS: 1.6.0.beta.1

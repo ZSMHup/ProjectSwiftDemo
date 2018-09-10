@@ -15,7 +15,7 @@ target 'ProjectSwiftDemo' do
     pod 'EachNavigationBar'
     pod 'MJRefresh'
     pod 'Kingfisher'
-    pod 'Tabman'
+    pod 'XLPagerTabStrip'
     
     pod 'CocoaDebug'
     pod 'Bugly'

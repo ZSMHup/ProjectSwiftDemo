@@ -18,4 +18,8 @@ internal extension UIApplication {
         }
         return nil
     }
+    
+    var navigationBarHeight: CGFloat {
+        return UIApplication.shared.statusBarFrame.size.height + 44.0
+    }
 }

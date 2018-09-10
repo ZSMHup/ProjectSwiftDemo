@@ -14,10 +14,14 @@
 		E19C89EA214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89E9214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift */; };
 		E19C89EC2142457F00538EC0 /* HomeHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89EB2142457F00538EC0 /* HomeHorizontalCell.swift */; };
 		E19C89EE21424B3000538EC0 /* HomeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */; };
+		E1D2C32E214608F500D29452 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2C32D214608F500D29452 /* Dictionary+Extension.swift */; };
+		E1D2C3302146140700D29452 /* SubjectOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2C32F2146140700D29452 /* SubjectOtherCell.swift */; };
+		E1D2C332214630F800D29452 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2C331214630F800D29452 /* StarRatingView.swift */; };
+		E1D2C3352146468200D29452 /* SubjectAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2C3342146468200D29452 /* SubjectAllViewController.swift */; };
+		E1D2C33721464C5C00D29452 /* SubjectTitleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2C33621464C5C00D29452 /* SubjectTitleListModel.swift */; };
+		E1D2C33921464ED000D29452 /* SubjectAllChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2C33821464ED000D29452 /* SubjectAllChildViewController.swift */; };
+		E1D2C33B21465D0B00D29452 /* SubjectAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2C33A21465D0B00D29452 /* SubjectAPI.swift */; };
 		E1FB59E6214255CA00B8252A /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59E5214255CA00B8252A /* BookDetailViewController.swift */; };
-		E1FB59EF214263AF00B8252A /* HomeSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59EE214263AF00B8252A /* HomeSubjectViewController.swift */; };
-		E1FB59F12142693900B8252A /* CommonTabmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59F02142693900B8252A /* CommonTabmanViewController.swift */; };
-		E1FB59F321426A8C00B8252A /* HomeSubjectChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59F221426A8C00B8252A /* HomeSubjectChildViewController.swift */; };
 		E1FB59F521427B1C00B8252A /* SubjectListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59F421427B1C00B8252A /* SubjectListModel.swift */; };
 		E1FB59FC21427E1400B8252A /* SubjectOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB59FB21427E1400B8252A /* SubjectOtherViewController.swift */; };
 		E1FDF2C82140C843001FE08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1FDF2C32140C843001FE08B /* Assets.xcassets */; };
@@ -71,10 +75,14 @@
 		E19C89E9214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHorizontalHasButtonCollectionCell.swift; sourceTree = "<group>"; };
 		E19C89EB2142457F00538EC0 /* HomeHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHorizontalCell.swift; sourceTree = "<group>"; };
 		E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWebViewController.swift; sourceTree = "<group>"; };
+		E1D2C32D214608F500D29452 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		E1D2C32F2146140700D29452 /* SubjectOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectOtherCell.swift; sourceTree = "<group>"; };
+		E1D2C331214630F800D29452 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		E1D2C3342146468200D29452 /* SubjectAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAllViewController.swift; sourceTree = "<group>"; };
+		E1D2C33621464C5C00D29452 /* SubjectTitleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTitleListModel.swift; sourceTree = "<group>"; };
+		E1D2C33821464ED000D29452 /* SubjectAllChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAllChildViewController.swift; sourceTree = "<group>"; };
+		E1D2C33A21465D0B00D29452 /* SubjectAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAPI.swift; sourceTree = "<group>"; };
 		E1FB59E5214255CA00B8252A /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
-		E1FB59EE214263AF00B8252A /* HomeSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubjectViewController.swift; sourceTree = "<group>"; };
-		E1FB59F02142693900B8252A /* CommonTabmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTabmanViewController.swift; sourceTree = "<group>"; };
-		E1FB59F221426A8C00B8252A /* HomeSubjectChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubjectChildViewController.swift; sourceTree = "<group>"; };
 		E1FB59F421427B1C00B8252A /* SubjectListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectListModel.swift; sourceTree = "<group>"; };
 		E1FB59FB21427E1400B8252A /* SubjectOtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectOtherViewController.swift; sourceTree = "<group>"; };
 		E1FDF2AD2140C7ED001FE08B /* ProjectSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +172,6 @@
 		E1FB59E92142620200B8252A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E1FB59F02142693900B8252A /* CommonTabmanViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +211,8 @@
 		E1FB59F821427DD000B8252A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E1D2C3342146468200D29452 /* SubjectAllViewController.swift */,
+				E1D2C33821464ED000D29452 /* SubjectAllChildViewController.swift */,
 				E1FB59FB21427E1400B8252A /* SubjectOtherViewController.swift */,
 			);
 			path = Controller;
@@ -213,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				E1FB59F421427B1C00B8252A /* SubjectListModel.swift */,
+				E1D2C33621464C5C00D29452 /* SubjectTitleListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +230,7 @@
 		E1FB59FA21427DD000B8252A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1D2C32F2146140700D29452 /* SubjectOtherCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 				E1FDF2E52140CA51001FE08B /* UIColor+Extension.swift */,
 				E1FDF2E12140CA51001FE08B /* UIImage+Extension.swift */,
 				E1FDF2E32140CA51001FE08B /* UIViewController+Extension.swift */,
+				E1D2C32D214608F500D29452 /* Dictionary+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -322,6 +334,7 @@
 				E1FDF30B2140CAA9001FE08B /* Matcher.swift */,
 				E1FDF30E2140CAA9001FE08B /* Toast.swift */,
 				E1FDF30F2140CAAA001FE08B /* WebViewContainer.swift */,
+				E1D2C331214630F800D29452 /* StarRatingView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -395,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				E1FDF33B2140DF59001FE08B /* HomeAPI.swift */,
+				E1D2C33A21465D0B00D29452 /* SubjectAPI.swift */,
 			);
 			path = NetworkAPI;
 			sourceTree = "<group>";
@@ -448,8 +462,6 @@
 				E1FDF3242140D031001FE08B /* HomeViewController.swift */,
 				E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */,
 				E1FB59E5214255CA00B8252A /* BookDetailViewController.swift */,
-				E1FB59EE214263AF00B8252A /* HomeSubjectViewController.swift */,
-				E1FB59F221426A8C00B8252A /* HomeSubjectChildViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -588,32 +600,28 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ProjectSwiftDemo/Pods-ProjectSwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework",
 				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaChainKit/CocoaChainKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaDebug/CocoaDebug.framework",
 				"${BUILT_PRODUCTS_DIR}/EachNavigationBar/EachNavigationBar.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoInsetter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaChainKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaDebug.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EachNavigationBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tabman.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -651,8 +659,8 @@
 				E1FDF2F32140CA52001FE08B /* String+Extension.swift in Sources */,
 				E1FDF34421411F98001FE08B /* HomeSubjectCollectionCell.swift in Sources */,
 				E1FDF2F02140CA52001FE08B /* UIColor+Extension.swift in Sources */,
-				E1FB59F321426A8C00B8252A /* HomeSubjectChildViewController.swift in Sources */,
 				E19C89E82142243C00538EC0 /* HomeHorizontalHasButtonCell.swift in Sources */,
+				E1D2C33921464ED000D29452 /* SubjectAllChildViewController.swift in Sources */,
 				E1FDF33E2140F6A0001FE08B /* HomeSubjectListModel.swift in Sources */,
 				E19C89E62142201600538EC0 /* HomeHorizontalCollectionCell.swift in Sources */,
 				E1FB59E6214255CA00B8252A /* BookDetailViewController.swift in Sources */,
@@ -661,6 +669,7 @@
 				E1FDF2F22140CA52001FE08B /* Int+Extension.swift in Sources */,
 				E1FDF3322140DF15001FE08B /* CacheManager.swift in Sources */,
 				E1FDF3132140CAAA001FE08B /* Toast.swift in Sources */,
+				E1D2C332214630F800D29452 /* StarRatingView.swift in Sources */,
 				E1FDF2EC2140CA52001FE08B /* UIImage+Extension.swift in Sources */,
 				E1FB59F521427B1C00B8252A /* SubjectListModel.swift in Sources */,
 				E1FDF2EE2140CA52001FE08B /* UIViewController+Extension.swift in Sources */,
@@ -677,17 +686,20 @@
 				E1FDF3352140DF15001FE08B /* Network.swift in Sources */,
 				E1FDF33A2140DF3B001FE08B /* NetworkTools.swift in Sources */,
 				E1FB59FC21427E1400B8252A /* SubjectOtherViewController.swift in Sources */,
-				E1FB59EF214263AF00B8252A /* HomeSubjectViewController.swift in Sources */,
-				E1FB59F12142693900B8252A /* CommonTabmanViewController.swift in Sources */,
+				E1D2C3352146468200D29452 /* SubjectAllViewController.swift in Sources */,
 				E1FDF3332140DF15001FE08B /* CleanJSON.swift in Sources */,
 				E1FDF3162140CD6F001FE08B /* AppDelegate+Services.swift in Sources */,
+				E1D2C33B21465D0B00D29452 /* SubjectAPI.swift in Sources */,
+				E1D2C32E214608F500D29452 /* Dictionary+Extension.swift in Sources */,
 				E1FDF2EF2140CA52001FE08B /* NotificationName+Extension.swift in Sources */,
 				E1FDF3312140DF15001FE08B /* CacheKey.swift in Sources */,
 				E1FDF33C2140DF59001FE08B /* HomeAPI.swift in Sources */,
 				E1FDF3402140FEE7001FE08B /* HomeListModel.swift in Sources */,
 				E19C89EC2142457F00538EC0 /* HomeHorizontalCell.swift in Sources */,
+				E1D2C3302146140700D29452 /* SubjectOtherCell.swift in Sources */,
 				E1FDF3252140D031001FE08B /* HomeViewController.swift in Sources */,
 				E1FDF31B2140CF4B001FE08B /* MainTabBarController.swift in Sources */,
+				E1D2C33721464C5C00D29452 /* SubjectTitleListModel.swift in Sources */,
 				E1FDF3102140CAAA001FE08B /* Matcher.swift in Sources */,
 				E1FDF2DF2140CA00001FE08B /* BaseNavigationController.swift in Sources */,
 			);

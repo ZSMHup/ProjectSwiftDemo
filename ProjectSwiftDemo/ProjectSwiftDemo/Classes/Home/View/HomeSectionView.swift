@@ -27,7 +27,7 @@ class HomeSectionView: UICollectionReusableView {
     private lazy var rightLabel: UILabel = {
         UILabel().chain
             .text("更多")
-            .textColor(UIColor.darkWithAlpha(0.54))
+            .textColor(UIColor.light)
             .systemFont(ofSize: 16)
             .build
     }()

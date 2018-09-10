@@ -18,7 +18,7 @@ class Network {
         let data: T
         
         var success: Bool {
-            return code == 0 && status == 1
+            return (code == 0 || code == 200) && status == 1
         }
         
         enum CodingKeys: String, CodingKey {

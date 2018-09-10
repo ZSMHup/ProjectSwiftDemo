@@ -31,24 +31,27 @@ class HomeViewController: BaseViewController {
     
     private var subjectArray: [HomeSubjectListModel] = [HomeSubjectListModel]()
     private var homeListArray: [HomeListModel] = [HomeListModel]()
+    private var categoryArray: [SubjectTitleListModel] = [SubjectTitleListModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        requestCategoryData()
     }
 }
 
 // MARK: 数据请求
 extension HomeViewController {
     private func requestHomeData() {
-        Toast.loading()
+//        Toast.loading()
         let group = DispatchGroup()
         
         group.enter()
         requestHomeSubjectList(cacheCompletion: { cacheModels in
             if self.collectionView.mj_header.isRefreshing {
                 self.subjectArray = cacheModels
+                self.collectionView.reloadData()
             }
         }, successCompletion: { (models) in
             group.leave()
@@ -62,6 +65,7 @@ extension HomeViewController {
         requestHomeAllList(cacheCompletion: { (cacheModels) in
             if self.collectionView.mj_header.isRefreshing {
                 self.homeListArray = cacheModels
+                self.collectionView.reloadData()
             }
         }, successCompletion: { (models) in
             group.leave()
@@ -72,12 +76,20 @@ extension HomeViewController {
         }
         
         group.notify(queue: .main) { [weak self] in
-            Toast.hide()
+//            Toast.hide()
             guard let `self` = self else { return }
             if self.collectionView.mj_header.isRefreshing {
                 self.collectionView.mj_header.endRefreshing()
             }
             self.collectionView.reloadData()
+        }
+    }
+    
+    private func requestCategoryData() {
+        requestSubjectAllTitleList(successCompletion: { (models) in
+            self.categoryArray = models
+        }) { (error) in
+            Toast.show(info: error)
         }
     }
 }
@@ -96,7 +108,7 @@ extension HomeViewController {
             self?.requestHomeData()
         })
         
-//        collectionView.mj_header.beginRefreshing()
+        collectionView.mj_header.beginRefreshing()
     }
 }
 
@@ -126,13 +138,27 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if !subjectArray.isEmpty, indexPath.section == 0 {
             let cell: HomeSubjectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeSubjectCell", for: indexPath) as! HomeSubjectCell
             cell.didSelectedItem = { index in
-                
-                if index == 0 {
-                    self.navigationController?.pushViewController(HomeSubjectViewController(defaultPage: .first), animated: true)
-                } else {
-                    self.navigationController?.pushViewController(SubjectOtherViewController(), animated: true)
+                switch index {
+                case 0:
+                    let allVC = SubjectAllViewController(categoryArray: self.categoryArray)
+                    self.navigationController?.pushViewController(allVC, animated: true)
+                    break
+                case 1:
+                    let otherVC = SubjectOtherViewController(sourceCode: "S201712135AQPKA")
+                    otherVC.navigation.item.title = "限免专区"
+                    self.navigationController?.pushViewController(otherVC, animated: true)
+                    break
+                case 2:
+                    let otherVC = SubjectOtherViewController(sourceCode: "S201712135AVZFQ")
+                    otherVC.navigation.item.title = "热门绘本"
+                    self.navigationController?.pushViewController(otherVC, animated: true)
+                    break
+                default:
+                    let otherVC = SubjectOtherViewController(sourceCode: "S201712135AZUPY")
+                    otherVC.navigation.item.title = "最新上架"
+                    self.navigationController?.pushViewController(otherVC, animated: true)
+                    break
                 }
-                
             }
             return cell
         }

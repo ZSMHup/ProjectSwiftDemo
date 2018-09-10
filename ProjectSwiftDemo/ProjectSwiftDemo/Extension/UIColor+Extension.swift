@@ -29,9 +29,9 @@ public extension UIColor {
         return UIColor(hex: "#000000")
     }
     
-    /// #777777
+    /// #000000 54%
     public static var light: UIColor {
-        return UIColor(hex: "#777777")
+        return UIColor.darkWithAlpha(0.54)
     }
     
     /// #888888
