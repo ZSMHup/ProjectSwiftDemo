@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import WebKit
 
 class HomeWebViewController: BaseViewController {
 
     private lazy var webContainer: WebViewContainer = {
         let webContainer = WebViewContainer()
         webContainer.load(url: URL(string: url))
+        webContainer.delegate = self
         return webContainer
     }()
     
@@ -40,6 +42,27 @@ class HomeWebViewController: BaseViewController {
     }
 }
 
-//extension HomeWebViewController: WKNavigationDelegate {
-//    
-//}
+extension HomeWebViewController: WebViewContainerDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+        if let url: URL = navigationAction.request.url, let scheme = url.scheme, scheme == "ellabook2" {
+            customActionHandler(url: url)
+            decisionHandler(.cancel)
+            return
+        }
+        decisionHandler(.allow)
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        let str = "document.getElementsByClassName('btn_share_Wrap')[0].remove();"
+        webView.evaluateJavaScript(str, completionHandler: nil)
+    }
+    
+    private func customActionHandler(url: URL) {
+        if let host = url.host, host == "detail.book" {
+            if let tempArr1 = url.query?.components(separatedBy: "&"), let tempArr2 = tempArr1.first?.components(separatedBy: "="), let bookCode = tempArr2.last {
+                navigationController?.pushViewController(BookDetailViewController(bookCode: bookCode), animated: true)
+            }
+        }
+    }
+}

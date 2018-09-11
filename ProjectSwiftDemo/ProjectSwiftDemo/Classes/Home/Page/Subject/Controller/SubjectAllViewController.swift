@@ -130,7 +130,6 @@ extension SubjectAllViewController {
                 }
                 if self.canMoveTo(index: index) {
                     self.moveToViewController(at: index, animated: true)
-                    
                 }
             }
         }

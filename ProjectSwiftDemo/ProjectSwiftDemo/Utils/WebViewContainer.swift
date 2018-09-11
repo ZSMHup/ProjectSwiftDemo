@@ -9,9 +9,18 @@
 import UIKit
 import WebKit
 
+@objc public protocol WebViewContainerDelegate {
+    
+    @objc optional func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
+    
+    @objc optional func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void)
+}
+
 class WebViewContainer: UIView {
 
     var title: (String) -> Void = { _ in }
+    
+    weak var delegate: WebViewContainerDelegate?
     
     let configuration: WKWebViewConfiguration = {
         var source = """
@@ -107,6 +116,9 @@ extension WebViewContainer: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         showProgressView(visible: false)
         title(webView.title ?? "")
+        if let delegate = self.delegate {
+            delegate.webView!(webView, didFinish: navigation)
+        }
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -120,5 +132,11 @@ extension WebViewContainer: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         let cred = URLCredential.init(trust: challenge.protectionSpace.serverTrust!)
         completionHandler(.useCredential, cred)
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if let delegate = self.delegate {
+            delegate.webView!(webView, decidePolicyFor: navigationAction, decisionHandler: decisionHandler)
+        }
     }
 }

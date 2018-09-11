@@ -181,7 +181,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell: HomeHorizontalHasButtonCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeHorizontalHasButtonCell", for: indexPath) as! HomeHorizontalHasButtonCell
             cell.dataSource = model.bookList
             cell.didSelectedItem = { index in
-                let bookDetailVC = BookDetailViewController()
+                let bookDetailVC = BookDetailViewController(bookCode: model.bookList[index].bookCode)
                 self.navigationController?.pushViewController(bookDetailVC, animated: true)
             }
             return cell
@@ -189,7 +189,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell: HomeHorizontalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeHorizontalCell", for: indexPath) as! HomeHorizontalCell
             cell.dataSource = model.bookList
             cell.didSelectedItem = { index in
-                let bookDetailVC = BookDetailViewController()
+                let bookDetailVC = BookDetailViewController(bookCode: model.bookList[index].bookCode)
                 self.navigationController?.pushViewController(bookDetailVC, animated: true)
             }
             return cell
@@ -226,7 +226,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 navigationController?.pushViewController(webViewVC, animated: true)
             }
         } else {
-            let bookDetailVC = BookDetailViewController()
+            let bookDetailVC = BookDetailViewController(bookCode: model.bookList[indexPath.item].bookCode)
             navigationController?.pushViewController(bookDetailVC, animated: true)
         }
     }
@@ -245,10 +245,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: 156.wpx, height: 258.5.hpx)
         case "DAILY_BOOK": /// 单个或者横向
             return CGSize(width: UIScreen.width, height: 397.5.hpx)
-        case "IMAGE_TEXT": /// 单个或者横向
-            return CGSize(width: UIScreen.width, height: 175.hpx)
         default: /// 单个或者横向
-            return CGSize(width: UIScreen.width, height: 165.hpx)
+            return CGSize(width: UIScreen.width, height: 175.hpx)
         }
     }
     
