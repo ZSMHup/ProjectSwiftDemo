@@ -8,6 +8,7 @@ PODS:
   - Kingfisher (4.9.0)
   - MJRefresh (3.1.15.6)
   - SnapKit (4.0.0)
+  - TagListView (1.3.1)
   - Toast-Swift (3.0.1)
   - XLPagerTabStrip (8.0.1)
 
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - Kingfisher
   - MJRefresh
   - SnapKit
+  - TagListView
   - Toast-Swift
   - XLPagerTabStrip
 
@@ -35,6 +37,7 @@ SPEC REPOS:
     - Kingfisher
     - MJRefresh
     - SnapKit
+    - TagListView
     - Toast-Swift
     - XLPagerTabStrip
 
@@ -48,9 +51,10 @@ SPEC CHECKSUMS:
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
   MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  TagListView: 6dafd34a61021c6db72c0c8e3a044054c9854311
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: 4f3d88a316bd88f7453082d8f8f9d2c724a73093
+PODFILE CHECKSUM: d0118b166fa563e94805a138c66de53392ead33c
 
 COCOAPODS: 1.6.0.beta.1

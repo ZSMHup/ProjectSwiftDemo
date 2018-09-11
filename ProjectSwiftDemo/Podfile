@@ -16,6 +16,7 @@ target 'ProjectSwiftDemo' do
     pod 'MJRefresh'
     pod 'Kingfisher'
     pod 'XLPagerTabStrip'
+    pod 'TagListView'
     
     pod 'CocoaDebug'
     pod 'Bugly'

@@ -14,6 +14,7 @@
 		E19C89EA214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89E9214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift */; };
 		E19C89EC2142457F00538EC0 /* HomeHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89EB2142457F00538EC0 /* HomeHorizontalCell.swift */; };
 		E19C89EE21424B3000538EC0 /* HomeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */; };
+		E1C5F6C121467791006D1372 /* SubjectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C5F6C021467791006D1372 /* SubjectCategoryView.swift */; };
 		E1D2C32E214608F500D29452 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2C32D214608F500D29452 /* Dictionary+Extension.swift */; };
 		E1D2C3302146140700D29452 /* SubjectOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2C32F2146140700D29452 /* SubjectOtherCell.swift */; };
 		E1D2C332214630F800D29452 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2C331214630F800D29452 /* StarRatingView.swift */; };
@@ -75,6 +76,7 @@
 		E19C89E9214227C800538EC0 /* HomeHorizontalHasButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHorizontalHasButtonCollectionCell.swift; sourceTree = "<group>"; };
 		E19C89EB2142457F00538EC0 /* HomeHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHorizontalCell.swift; sourceTree = "<group>"; };
 		E19C89ED21424B3000538EC0 /* HomeWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWebViewController.swift; sourceTree = "<group>"; };
+		E1C5F6C021467791006D1372 /* SubjectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCategoryView.swift; sourceTree = "<group>"; };
 		E1D2C32D214608F500D29452 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		E1D2C32F2146140700D29452 /* SubjectOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectOtherCell.swift; sourceTree = "<group>"; };
 		E1D2C331214630F800D29452 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D2C32F2146140700D29452 /* SubjectOtherCell.swift */,
+				E1C5F6C021467791006D1372 /* SubjectCategoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/TagListView/TagListView.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
@@ -620,6 +624,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TagListView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
@@ -665,6 +670,7 @@
 				E19C89E62142201600538EC0 /* HomeHorizontalCollectionCell.swift in Sources */,
 				E1FB59E6214255CA00B8252A /* BookDetailViewController.swift in Sources */,
 				E1FDF3272140D03E001FE08B /* PersonalViewController.swift in Sources */,
+				E1C5F6C121467791006D1372 /* SubjectCategoryView.swift in Sources */,
 				E1FDF3142140CAAA001FE08B /* WebViewContainer.swift in Sources */,
 				E1FDF2F22140CA52001FE08B /* Int+Extension.swift in Sources */,
 				E1FDF3322140DF15001FE08B /* CacheManager.swift in Sources */,
