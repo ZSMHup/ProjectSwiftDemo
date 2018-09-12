@@ -15,8 +15,9 @@ class HomeSectionView: UICollectionReusableView {
     private lazy var titleLabel: UILabel = {
         UILabel().chain
             .textColor(UIColor.dark)
-            .systemFont(ofSize: 20)
+            .systemFont(ofSize: 20.fontpx)
             .build
+        
     }()
     private lazy var rightImgView: UIImageView = {
         UIImageView().chain
@@ -28,14 +29,19 @@ class HomeSectionView: UICollectionReusableView {
         UILabel().chain
             .text("更多")
             .textColor(UIColor.light)
-            .systemFont(ofSize: 16)
+            .systemFont(ofSize: 16.fontpx)
             .build
     }()
+    
+    var didSelectedSection: () -> Void = {}
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor.global
         addSubViews()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(sectionClick))
+        self.addGestureRecognizer(tap)
     }
     
     func update(model: HomeListModel) {
@@ -52,6 +58,10 @@ class HomeSectionView: UICollectionReusableView {
         } else {
             self.bgView.backgroundColor = UIColor.white
         }
+    }
+    
+    @objc private func sectionClick() {
+        didSelectedSection()
     }
     
     required init?(coder aDecoder: NSCoder) {

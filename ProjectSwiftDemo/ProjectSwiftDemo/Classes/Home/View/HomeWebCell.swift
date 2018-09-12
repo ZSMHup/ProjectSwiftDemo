@@ -13,7 +13,7 @@ class HomeWebCell: UICollectionViewCell {
     lazy var subjectLabel: UILabel = {
         UILabel().chain
             .textColor(UIColor.dark)
-            .systemFont(ofSize: 14)
+            .systemFont(ofSize: 14.fontpx)
             .numberOfLines(2)
             .build
     }()

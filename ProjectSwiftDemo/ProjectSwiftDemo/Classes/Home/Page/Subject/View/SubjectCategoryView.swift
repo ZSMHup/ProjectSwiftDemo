@@ -20,7 +20,7 @@ class SubjectCategoryView: UIView {
     private lazy var titleLabel: UILabel = {
         UILabel().chain
             .text("全部分类")
-            .systemFont(ofSize: 16)
+            .systemFont(ofSize: 16.fontpx)
             .textColor(UIColor.light)
             .build
     }()
@@ -29,7 +29,7 @@ class SubjectCategoryView: UIView {
         let tagListView = TagListView()
         tagListView.delegate = self
         tagListView.addTags(categoryTitles)
-        tagListView.textFont = UIFont.systemFont(ofSize: 16)
+        tagListView.textFont = UIFont.systemFont(ofSize: 16.fontpx)
         tagListView.textColor = .light
         tagListView.tagBackgroundColor = .white
         tagListView.tagSelectedBackgroundColor = .theme
@@ -81,7 +81,7 @@ extension SubjectCategoryView {
             make.left.equalTo(self.snp.left).offset(36.wpx)
             make.right.equalTo(self.snp.right).offset(-36.wpx)
             make.top.equalTo(self.snp.top).offset(47.hpx)
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-16.hpx)
         }
     }
 }

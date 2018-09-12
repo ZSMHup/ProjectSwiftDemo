@@ -15,7 +15,7 @@ class HomeHorizontalCollectionCell: UICollectionViewCell {
     lazy var subjectLabel: UILabel = {
         UILabel().chain
             .textColor(UIColor.dark)
-            .systemFont(ofSize: 14)
+            .systemFont(ofSize: 14.fontpx)
             .numberOfLines(2)
             .build
     }()
@@ -41,10 +41,17 @@ class HomeHorizontalCollectionCell: UICollectionViewCell {
         
         subjectLabel.text = model.bookName
         if let ossUrl = model.ebBookResource.first?.ossUrl {
-            imgView.kf.setImage(with: URL(string: ossUrl))
+            imgView.kf.setImage(with: URL(string: ossUrl), placeholder: #imageLiteral(resourceName: "bigImage_placeholder"))
         }
     }
     
+    func updateMore(model: SubjectListModel) {
+        subjectLabel.text = model.bookName
+        if let ossUrl = model.ebBookResource.first?.ossUrl {
+            imgView.kf.setImage(with: URL(string: ossUrl), placeholder: #imageLiteral(resourceName: "bigImage_placeholder"))
+        }
+    }
+
     func update(model: BookListModel) {
         imgView.snp.updateConstraints { (make) in
             make.height.equalTo(126.hpx)
@@ -52,9 +59,11 @@ class HomeHorizontalCollectionCell: UICollectionViewCell {
         subjectLabel.text = model.bookName
         
         if let ossUrl = model.ebBookResource.first?.ossUrl {
-            imgView.kf.setImage(with: URL(string: ossUrl))
+            imgView.kf.setImage(with: URL(string: ossUrl), placeholder: #imageLiteral(resourceName: "bigImage_placeholder"))
         }
     }
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

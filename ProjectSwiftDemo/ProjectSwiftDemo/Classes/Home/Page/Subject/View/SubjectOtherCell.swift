@@ -16,14 +16,14 @@ class SubjectOtherCell: UICollectionViewCell {
     private lazy var titleLabel: UILabel = {
         UILabel().chain
             .textColor(UIColor.dark)
-            .systemFont(ofSize: 16)
+            .systemFont(ofSize: 16.fontpx)
             .build
     }()
     
     private lazy var detailLabel: UILabel = {
         UILabel().chain
             .textColor(UIColor.light)
-            .systemFont(ofSize: 12)
+            .systemFont(ofSize: 12.fontpx)
             .numberOfLines(3)
             .build
     }()
@@ -38,7 +38,7 @@ class SubjectOtherCell: UICollectionViewCell {
     private lazy var starRatingLabel: UILabel = {
         UILabel().chain
             .textColor(UIColor(hex: "#F59523"))
-            .systemFont(ofSize: 16)
+            .systemFont(ofSize: 16.fontpx)
             .build
     }()
     
@@ -50,7 +50,7 @@ class SubjectOtherCell: UICollectionViewCell {
     
     func update(model: SubjectListModel) {
         if let ossUrl = model.ebBookResource.first?.ossUrl {
-            imgView.kf.setImage(with: URL(string: ossUrl))
+            imgView.kf.setImage(with: URL(string: ossUrl), placeholder: #imageLiteral(resourceName: "bigImage_placeholder"))
         }
         titleLabel.text = model.bookName
         detailLabel.text = model.bookIntroduction

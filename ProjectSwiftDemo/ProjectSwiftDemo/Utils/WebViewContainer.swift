@@ -39,7 +39,6 @@ class WebViewContainer: UIView {
     
     lazy var webView: WKWebView = {
         let webView = WKWebView(frame: bounds, configuration: configuration)
-//        webView.scrollView.backgroundColor = UIColor.globalBackground
         webView.navigationDelegate = self
         return webView
     }()

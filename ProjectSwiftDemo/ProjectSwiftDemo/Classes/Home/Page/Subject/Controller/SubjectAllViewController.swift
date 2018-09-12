@@ -68,7 +68,7 @@ extension SubjectAllViewController {
     private func config() {
         settings.style.selectedBarVerticalAlignment = .bottom
         settings.style.buttonBarHeight = 47.hpx + UIApplication.shared.navigationBarHeight
-        settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 16)
+        settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 16.fontpx)
         settings.style.buttonBarItemBackgroundColor = .white
         settings.style.buttonBarLeftContentInset = 36.wpx
         settings.style.buttonBarRightContentInset = 86.wpx
@@ -112,7 +112,6 @@ extension SubjectAllViewController {
         categoryView.snp.makeConstraints { (make) in
             make.top.equalTo(topLayoutGuideBottom)
             make.left.right.equalToSuperview()
-            make.height.equalTo(137.hpx)
         }
         
         UIView.animate(withDuration: 0.25) {
@@ -151,7 +150,7 @@ extension SubjectAllViewController {
     
     private func hidden() {
         UIView.animate(withDuration: 0.25, animations: {
-            self.categoryView.transform = CGAffineTransform(translationX: 0, y: -137.hpx )
+            self.categoryView.transform = CGAffineTransform(translationX: 0, y: -self.categoryView.frame.size.height)
             self.shadeView.alpha = 0
         }) { (finished) in
             self.categoryView.removeFromSuperview()

@@ -14,10 +14,10 @@ class SubjectAllChildViewController: BaseViewController {
 
     private lazy var collectionView: UICollectionView = {
         
-        let itemWidth = (UIScreen.width - 144.wpx) / 4
+        let itemWidth = (isPad() ? 156 : 139.5).wpx
         
         let flowLayout = UICollectionViewFlowLayout().chain
-            .itemSize(width: itemWidth - 10, height: 259.hpx)
+            .itemSize(width: itemWidth, height: 259.hpx)
             .sectionInset(top: 20, left: 0, bottom: 20, right: 0)
             .build
         return UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout).chain

@@ -44,7 +44,6 @@ class HomeViewController: BaseViewController {
 // MARK: 数据请求
 extension HomeViewController {
     private func requestHomeData() {
-//        Toast.loading()
         let group = DispatchGroup()
         
         group.enter()
@@ -76,7 +75,6 @@ extension HomeViewController {
         }
         
         group.notify(queue: .main) { [weak self] in
-//            Toast.hide()
             guard let `self` = self else { return }
             if self.collectionView.mj_header.isRefreshing {
                 self.collectionView.mj_header.endRefreshing()
@@ -109,6 +107,24 @@ extension HomeViewController {
         })
         
         collectionView.mj_header.beginRefreshing()
+    }
+    
+    private func sectionClickHanlder(model: HomeListModel) {
+        switch model.partStyle {
+        case "DAILY_BOOK":
+            navigationController?.pushViewController(HistoryRecViewController(), animated: true)
+            break
+        case "IMAGE_TEXT":
+            let otherVC = SubjectOtherViewController(sourceCode: model.partCode)
+            otherVC.navigation.item.title = model.partTitle
+            self.navigationController?.pushViewController(otherVC, animated: true)
+            break
+        default:
+            let moreVC = MoreViewController(sourceCode: model.partCode)
+            moreVC.navigation.item.title = model.partTitle
+            self.navigationController?.pushViewController(moreVC, animated: true)
+            break
+        }
     }
 }
 
@@ -207,6 +223,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let model: HomeListModel = homeListArray[indexPath.section - (subjectArray.isEmpty ? 0 : 1)]
             let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeSectionView", for: indexPath) as! HomeSectionView
             view.update(model: model)
+            view.didSelectedSection = {
+                self.sectionClickHanlder(model: model)
+            }
             reusableview = view
         }
         return reusableview
@@ -242,11 +261,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         let model: HomeListModel = homeListArray[indexPath.section - (subjectArray.isEmpty ? 0 : 1)]
         switch model.partStyle {
         case "SLIDE_PORTRAIT": /// 竖向
-            return CGSize(width: 156.wpx, height: 258.5.hpx)
+            return CGSize(width: (isPad() ? 156 : 139.5).wpx, height: 258.5.hpx)
         case "DAILY_BOOK": /// 单个或者横向
-            return CGSize(width: UIScreen.width, height: 397.5.hpx)
+            return CGSize(width: UIScreen.width, height: 73.hpx + (UIScreen.width - 72.wpx) * (324.5 / 696))
         default: /// 单个或者横向
-            return CGSize(width: UIScreen.width, height: 175.hpx)
+            return CGSize(width: UIScreen.width, height: 185.hpx)
         }
     }
     

@@ -23,7 +23,7 @@ class HomeHorizontalHasButtonCollectionCell: UICollectionViewCell {
     private lazy var titleLabel: UILabel = {
         UILabel().chain
             .textColor(UIColor.dark)
-            .systemFont(ofSize: 16)
+            .systemFont(ofSize: 16.fontpx)
             .numberOfLines(2)
             .build
     }()
@@ -31,7 +31,7 @@ class HomeHorizontalHasButtonCollectionCell: UICollectionViewCell {
     private lazy var subjectLabel: UILabel = {
         UILabel().chain
             .textColor(UIColor.dark)
-            .systemFont(ofSize: 12)
+            .systemFont(ofSize: 12.fontpx)
             .numberOfLines(0)
             .build
     }()
@@ -40,7 +40,7 @@ class HomeHorizontalHasButtonCollectionCell: UICollectionViewCell {
         UILabel().chain
             .text("立即阅读")
             .textColor(UIColor.theme)
-            .systemFont(ofSize: 12)
+            .systemFont(ofSize: 12.fontpx)
             .textAlignment(.center)
             .cornerRadius(15)
             .masksToBounds(true)
@@ -59,7 +59,7 @@ class HomeHorizontalHasButtonCollectionCell: UICollectionViewCell {
         titleLabel.text = model.bookName
         subjectLabel.text = model.bookIntroduction
         if let ossUrl = model.ebBookResource.first?.ossUrl {
-            imgView.kf.setImage(with: URL(string: ossUrl))
+            imgView.kf.setImage(with: URL(string: ossUrl), placeholder: #imageLiteral(resourceName: "bigImage_placeholder"))
         }
     }
     

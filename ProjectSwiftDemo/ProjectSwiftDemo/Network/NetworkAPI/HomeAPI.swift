@@ -45,7 +45,7 @@ func requestHomeAllList(
     successCompletion: @escaping ([HomeListModel])->(),
     failureCompletion: @escaping (String)->()) {
     
-    let paramter = ["method": "ella.book.listAllPart",
+    let paramter = ["method": "ella.openPlatform.opAllPartList",
                     "channelCode" : "kidsTools",]
     
     NetworkTools.default.requestPostHanlder(paramterDic: paramter,
@@ -60,5 +60,29 @@ func requestHomeAllList(
     }
 }
 
-
+func requestHistoryRecList(
+    page: Int,
+    cacheCompletion: @escaping ([HistoryRecModel])->(),
+    successCompletion: @escaping ([HistoryRecModel])->(),
+    failureCompletion: @escaping (String)->()) {
+    
+    let paramter = [
+        "channelCode" : "kidsTools",
+        "method": "ella.book.listDailyBook",
+        "content": ["pageIndex": page,
+                    "pageSize": 10,
+                    "listType": "LIST"].dictionaryToString
+    ]
+    
+    NetworkTools.default.requestPostHanlder(paramterDic: paramter,
+                                            cache: true,
+                                            model: [HistoryRecModel].self,
+                                            cacheCompletion: { (caches) in
+                                                cacheCompletion(caches)
+    }, successCompletion: { (models) in
+        successCompletion(models)
+    }) { (error) in
+        failureCompletion(error)
+    }
+}
 

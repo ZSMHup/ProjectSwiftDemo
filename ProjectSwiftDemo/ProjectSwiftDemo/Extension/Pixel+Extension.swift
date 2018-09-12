@@ -27,6 +27,14 @@ public extension CGFloat {
         }
         return UIScreen.height / baseheight * self
     }
+    
+    var fontpx: CGFloat {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return self
+        }
+        return self * 0.8
+    }
+    
 }
 
 public extension Double {
@@ -38,6 +46,10 @@ public extension Double {
     var hpx: CGFloat {
         return CGFloat(self).hpx
     }
+    
+    var fontpx: CGFloat {
+        return CGFloat(self).fontpx
+    }
 }
 
 public extension Int {
@@ -48,6 +60,10 @@ public extension Int {
     
     var hpx: CGFloat {
         return CGFloat(self).hpx
+    }
+    
+    var fontpx: CGFloat {
+        return CGFloat(self).fontpx
     }
 }
 

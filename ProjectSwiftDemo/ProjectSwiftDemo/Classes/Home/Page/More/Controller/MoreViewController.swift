@@ -1,30 +1,30 @@
 //
-//  SubjectOtherViewController.swift
+//  MoreViewController.swift
 //  ProjectSwiftDemo
 //
-//  Created by 张书孟 on 2018/9/7.
+//  Created by 张书孟 on 2018/9/11.
 //  Copyright © 2018年 zsm. All rights reserved.
 //
 
 import UIKit
 import MJRefresh
 
-class SubjectOtherViewController: BaseViewController {
+class MoreViewController: BaseViewController {
 
     private lazy var collectionView: UICollectionView = {
         
-        let itemWidth = (UIScreen.width - 40.wpx) / (isPad() ? 2 : 1)
+        let itemWidth = (isPad() ? 156 : 139.5).wpx
         
         let flowLayout = UICollectionViewFlowLayout().chain
-            .itemSize(width: itemWidth - 10, height: 182.hpx)
-            .sectionInset(top: 12.hpx, left: 0, bottom: 12.hpx, right: 0)
+            .itemSize(width: itemWidth, height: 259.hpx)
+            .sectionInset(top: 20, left: 0, bottom: 20, right: 0)
             .build
         return UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout).chain
-            .backgroundColor(UIColor.white)
-            .contentInset(top: 0, left: 20.wpx, bottom: 0, right: 20.wpx)
+            .backgroundColor(UIColor.global)
+            .contentInset(top: 0, left: 36.wpx, bottom: 0, right: 36.wpx)
             .delegate(self)
             .dataSource(self)
-            .register(SubjectOtherCell.self, forCellWithReuseIdentifier: "SubjectOtherCell")
+            .register(HomeHorizontalCollectionCell.self, forCellWithReuseIdentifier: "HomeHorizontalCollectionCell")
             .build
     }()
     
@@ -32,9 +32,7 @@ class SubjectOtherViewController: BaseViewController {
     private var page: Int = 0
     
     let sourceCode: String
-    
     init(sourceCode: String = "") {
-        
         self.sourceCode = sourceCode
         super.init(nibName: nil, bundle: nil)
     }
@@ -45,13 +43,13 @@ class SubjectOtherViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .global
         
         setupUI()
     }
-
 }
 
-extension SubjectOtherViewController {
+extension MoreViewController {
     private func setupUI() {
         disablesAdjustScrollViewInsets(collectionView)
         view.addSubview(collectionView)
@@ -74,7 +72,7 @@ extension SubjectOtherViewController {
     }
 }
 
-extension SubjectOtherViewController {
+extension MoreViewController {
     private func requestData() {
         Toast.loading()
         requestSubjectList(page: page, sourceCode: sourceCode, cacheCompletion: { (cacheModel) in
@@ -105,15 +103,15 @@ extension SubjectOtherViewController {
     }
 }
 
-extension SubjectOtherViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MoreViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: SubjectOtherCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubjectOtherCell", for: indexPath) as! SubjectOtherCell
-        cell.update(model: dataSource[indexPath.item])
+        let cell: HomeHorizontalCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeHorizontalCollectionCell", for: indexPath) as! HomeHorizontalCollectionCell
+        cell.updateMore(model: dataSource[indexPath.item])
         return cell
     }
     
@@ -121,5 +119,3 @@ extension SubjectOtherViewController: UICollectionViewDelegate, UICollectionView
         
     }
 }
-
-

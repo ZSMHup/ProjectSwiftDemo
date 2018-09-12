@@ -10,7 +10,6 @@ import Foundation
 
 extension Dictionary {
     
-    
     /// 字典转jsonString
     var dictionaryToString: String {
         var result: String = ""
