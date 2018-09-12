@@ -57,6 +57,10 @@ class SubjectAllViewController: ButtonBarPagerTabStripViewController {
             childViewControllers.append(child)
         }
         
+        guard !childViewControllers.isEmpty else {
+            return [SubjectAllChildNoViewController()]
+        }
+        
         return childViewControllers
     }
     
